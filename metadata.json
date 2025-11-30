@@ -1,0 +1,7 @@
+{
+  "name": "Copy of Metamorphosis Agency",
+  "description": "A modern digital agency portfolio specializing in Web Design, Automation, and AI Agents.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
