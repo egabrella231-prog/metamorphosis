@@ -3,20 +3,20 @@ import { Globe, Workflow, Bot, CheckCircle2 } from 'lucide-react';
 import { ServiceItem } from '../types';
 
 const ServiceCard: React.FC<ServiceItem> = ({ title, description, icon }) => (
-  <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group">
-    <div className="w-14 h-14 rounded-2xl bg-orange-100 text-meta-orange flex items-center justify-center mb-6 group-hover:bg-meta-orange group-hover:text-white transition-colors duration-300">
+  <div className="bg-gray-900 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-800 group hover:border-meta-orange/30">
+    <div className="w-14 h-14 rounded-2xl bg-orange-900/20 text-meta-orange flex items-center justify-center mb-6 group-hover:bg-meta-orange group-hover:text-white transition-colors duration-300">
       {icon}
     </div>
-    <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-meta-orange transition-colors">
+    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-meta-orange transition-colors">
       {title}
     </h3>
-    <p className="text-gray-600 leading-relaxed">
+    <p className="text-gray-400 leading-relaxed">
       {description}
     </p>
     <ul className="mt-6 space-y-3">
       {[1, 2, 3].map((_, i) => (
         <li key={i} className="flex items-center text-sm text-gray-500">
-          <CheckCircle2 className="w-4 h-4 text-meta-green mr-2" />
+          <CheckCircle2 className="w-4 h-4 text-meta-lightGreen mr-2" />
           <span>Professional Implementation</span>
         </li>
       ))}
@@ -44,14 +44,14 @@ export const Services: React.FC = () => {
   ];
 
   return (
-    <section id="services" className="py-24 bg-white relative">
+    <section id="services" className="py-24 bg-gray-950 relative border-t border-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-meta-green font-semibold tracking-wide uppercase text-sm mb-3">Our Expertise</h2>
-          <h3 className="text-4xl md:text-5xl font-bold text-gray-900">
+          <h2 className="text-meta-lightGreen font-semibold tracking-wide uppercase text-sm mb-3">Our Expertise</h2>
+          <h3 className="text-4xl md:text-5xl font-bold text-white">
             Services that Drive Growth
           </h3>
-          <p className="mt-4 text-xl text-gray-500">
+          <p className="mt-4 text-xl text-gray-400">
             Comprehensive digital solutions tailored to help your business evolve.
           </p>
         </div>

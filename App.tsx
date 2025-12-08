@@ -8,12 +8,11 @@ import { ChatWidget } from './components/ChatWidget';
 
 const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gray-950 text-gray-100 selection:bg-meta-orange selection:text-white">
       <Navbar />
       <main>
         <Hero />
         <Services />
-        {/* Optional divider or About section could go here */}
         <Contact />
       </main>
       <Footer />

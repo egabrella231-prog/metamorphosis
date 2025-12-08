@@ -61,38 +61,38 @@ export const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-gray-50">
+    <section id="contact" className="py-24 bg-gray-950 border-t border-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           
           {/* Contact Info */}
           <div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Metamorphose?
             </h2>
-            <p className="text-lg text-gray-600 mb-10">
+            <p className="text-lg text-gray-400 mb-10">
               Get in touch with us today to discuss how we can transform your digital presence. 
               We are ready to build your website, automate your workflow, or create your AI workforce.
             </p>
 
             <div className="space-y-6">
-              <a href="tel:+264813879841" className="flex items-center p-4 bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow">
-                <div className="bg-orange-100 p-3 rounded-full text-meta-orange mr-4">
+              <a href="tel:+264813879841" className="flex items-center p-4 bg-gray-900 rounded-2xl shadow-sm hover:shadow-md hover:bg-gray-800 transition-all border border-gray-800">
+                <div className="bg-orange-900/20 p-3 rounded-full text-meta-orange mr-4">
                   <Phone className="w-6 h-6" />
                 </div>
                 <div>
                   <p className="text-sm text-gray-500">Call Us</p>
-                  <p className="text-lg font-semibold text-gray-900">+264 81 387 9841</p>
+                  <p className="text-lg font-semibold text-white">+264 81 387 9841</p>
                 </div>
               </a>
 
-              <a href="mailto:egabrella231@gmail.com" className="flex items-center p-4 bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow">
-                <div className="bg-orange-100 p-3 rounded-full text-meta-orange mr-4">
+              <a href="mailto:egabrella231@gmail.com" className="flex items-center p-4 bg-gray-900 rounded-2xl shadow-sm hover:shadow-md hover:bg-gray-800 transition-all border border-gray-800">
+                <div className="bg-orange-900/20 p-3 rounded-full text-meta-orange mr-4">
                   <Mail className="w-6 h-6" />
                 </div>
                 <div>
                   <p className="text-sm text-gray-500">Email Us</p>
-                  <p className="text-lg font-semibold text-gray-900">egabrella231@gmail.com</p>
+                  <p className="text-lg font-semibold text-white">egabrella231@gmail.com</p>
                 </div>
               </a>
 
@@ -119,44 +119,44 @@ export const Contact: React.FC = () => {
           </div>
 
           {/* Form */}
-          <div className="bg-white rounded-3xl p-8 lg:p-10 shadow-xl border border-gray-100">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Send us a message</h3>
+          <div className="bg-gray-900 rounded-3xl p-8 lg:p-10 shadow-xl border border-gray-800">
+            <h3 className="text-2xl font-bold text-white mb-6">Send us a message</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                <label className="block text-sm font-medium text-gray-400 mb-2">Full Name</label>
                 <input
                   type="text"
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-meta-orange focus:border-transparent outline-none transition-all"
+                  className="w-full px-4 py-3 rounded-xl bg-gray-800 border border-gray-700 text-white focus:ring-2 focus:ring-meta-orange focus:border-transparent outline-none transition-all placeholder-gray-500"
                   placeholder="John Doe"
                   disabled={isSubmitting}
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                <label className="block text-sm font-medium text-gray-400 mb-2">Email Address</label>
                 <input
                   type="email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-meta-orange focus:border-transparent outline-none transition-all"
+                  className="w-full px-4 py-3 rounded-xl bg-gray-800 border border-gray-700 text-white focus:ring-2 focus:ring-meta-orange focus:border-transparent outline-none transition-all placeholder-gray-500"
                   placeholder="john@example.com"
                   disabled={isSubmitting}
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Service Interested In</label>
+                <label className="block text-sm font-medium text-gray-400 mb-2">Service Interested In</label>
                 <select
                   name="service"
                   value={formData.service}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-meta-orange focus:border-transparent outline-none transition-all bg-white"
+                  className="w-full px-4 py-3 rounded-xl bg-gray-800 border border-gray-700 text-white focus:ring-2 focus:ring-meta-orange focus:border-transparent outline-none transition-all"
                   disabled={isSubmitting}
                 >
                   <option>Web Design</option>
@@ -167,21 +167,21 @@ export const Contact: React.FC = () => {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                <label className="block text-sm font-medium text-gray-400 mb-2">Message</label>
                 <textarea
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
                   required
                   rows={4}
-                  className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-meta-orange focus:border-transparent outline-none transition-all"
+                  className="w-full px-4 py-3 rounded-xl bg-gray-800 border border-gray-700 text-white focus:ring-2 focus:ring-meta-orange focus:border-transparent outline-none transition-all placeholder-gray-500"
                   placeholder="Tell us about your project..."
                   disabled={isSubmitting}
                 ></textarea>
               </div>
 
               {errorMessage && (
-                <div className="flex items-center text-red-600 bg-red-50 p-3 rounded-lg text-sm">
+                <div className="flex items-center text-red-400 bg-red-900/20 p-3 rounded-lg text-sm border border-red-900/30">
                   <AlertCircle className="w-5 h-5 mr-2 flex-shrink-0" />
                   {errorMessage}
                 </div>

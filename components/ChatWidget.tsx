@@ -110,7 +110,7 @@ export const ChatWidget: React.FC = () => {
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end">
       {/* Chat Window */}
       {isOpen && (
-        <div className="bg-white w-[90vw] md:w-96 h-[500px] rounded-2xl shadow-2xl flex flex-col border border-gray-200 mb-4 overflow-hidden animate-fade-in-up">
+        <div className="bg-gray-900 w-[90vw] md:w-96 h-[500px] rounded-2xl shadow-2xl flex flex-col border border-gray-800 mb-4 overflow-hidden animate-fade-in-up">
           {/* Header */}
           <div className="bg-meta-orange p-4 flex justify-between items-center text-white">
             <div className="flex items-center">
@@ -130,7 +130,7 @@ export const ChatWidget: React.FC = () => {
           </div>
 
           {/* Messages Area */}
-          <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-gray-50">
+          <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-gray-950">
             {messages.map((msg) => (
               <div
                 key={msg.id}
@@ -140,7 +140,7 @@ export const ChatWidget: React.FC = () => {
                   className={`max-w-[80%] rounded-2xl px-4 py-2.5 text-sm leading-relaxed ${
                     msg.role === 'user'
                       ? 'bg-meta-orange text-white rounded-br-none'
-                      : 'bg-white text-gray-800 border border-gray-200 rounded-bl-none shadow-sm'
+                      : 'bg-gray-800 text-gray-100 border border-gray-700 rounded-bl-none shadow-sm'
                   }`}
                 >
                   {msg.text}
@@ -149,7 +149,7 @@ export const ChatWidget: React.FC = () => {
             ))}
             {isLoading && (
               <div className="flex justify-start">
-                <div className="bg-white p-3 rounded-2xl rounded-bl-none shadow-sm border border-gray-200">
+                <div className="bg-gray-800 p-3 rounded-2xl rounded-bl-none shadow-sm border border-gray-700">
                   <Loader2 className="w-5 h-5 text-meta-orange animate-spin" />
                 </div>
               </div>
@@ -158,12 +158,12 @@ export const ChatWidget: React.FC = () => {
           </div>
 
           {/* Input Area */}
-          <div className="p-3 bg-white border-t border-gray-100">
-            <div className="flex items-center bg-gray-100 rounded-full px-2 py-1">
+          <div className="p-3 bg-gray-900 border-t border-gray-800">
+            <div className="flex items-center bg-gray-800 rounded-full px-2 py-1 border border-gray-700">
                <button
                 onClick={handleSpeechInput}
                 className={`p-2 rounded-full transition-all duration-200 ${
-                  isListening ? 'bg-red-500 text-white animate-pulse' : 'text-gray-500 hover:text-meta-orange'
+                  isListening ? 'bg-red-500 text-white animate-pulse' : 'text-gray-400 hover:text-meta-orange'
                 }`}
                 title="Speak to type"
               >
@@ -177,14 +177,14 @@ export const ChatWidget: React.FC = () => {
                 onChange={(e) => setInputText(e.target.value)}
                 onKeyDown={handleKeyDown}
                 placeholder={isListening ? "Listening..." : "Type a message..."}
-                className="flex-1 bg-transparent border-none focus:ring-0 px-2 py-2 text-sm text-gray-800 placeholder-gray-400 outline-none"
+                className="flex-1 bg-transparent border-none focus:ring-0 px-2 py-2 text-sm text-gray-200 placeholder-gray-500 outline-none"
               />
               
               <button
                 onClick={() => handleSendMessage()}
                 disabled={!inputText.trim() && !isLoading}
                 className={`p-2 rounded-full transition-colors ${
-                  inputText.trim() ? 'bg-meta-orange text-white' : 'text-gray-400'
+                  inputText.trim() ? 'bg-meta-orange text-white' : 'text-gray-600'
                 }`}
               >
                 <Send size={18} />
@@ -200,9 +200,9 @@ export const ChatWidget: React.FC = () => {
           onClick={() => setIsOpen(true)}
           className="bg-meta-orange hover:bg-orange-600 text-white p-4 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 group relative"
         >
-          <span className="absolute -top-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white"></span>
+          <span className="absolute -top-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white/50"></span>
           <MessageSquare className="w-8 h-8" />
-          <span className="absolute right-14 top-1/2 -translate-y-1/2 bg-gray-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+          <span className="absolute right-14 top-1/2 -translate-y-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-gray-700">
             Chat with AI
           </span>
         </button>
